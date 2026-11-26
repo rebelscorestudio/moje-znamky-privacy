@@ -3,84 +3,123 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="index,follow">
   <meta name="description" content="Zásady ochrany osobních údajů aplikace Moje Známky od RebelsCore.">
+  <meta name="robots" content="index,follow">
   <title>Zásady ochrany osobních údajů – Moje Známky</title>
   <style>
-    :root{color-scheme:light;--ink:#172033;--muted:#536174;--line:#dce3ec;--accent:#2457b8;--surface:#f5f8fc}
-    *{box-sizing:border-box}body{margin:0;background:#fff;color:var(--ink);font:16px/1.68 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
-    main{max-width:900px;margin:0 auto;padding:44px 24px 76px}
-    header{padding:26px 0 30px;border-bottom:1px solid var(--line);margin-bottom:28px}
-    h1{font-size:clamp(2rem,5vw,2.8rem);line-height:1.14;margin:0 0 12px}
-    h2{font-size:1.28rem;line-height:1.3;margin:34px 0 10px}
-    p,li{color:#273449}li{margin:5px 0}.meta{color:var(--muted);font-size:.94rem}
-    .note{background:var(--surface);border-left:4px solid var(--accent);padding:14px 18px;border-radius:8px}
-    a{color:var(--accent);overflow-wrap:anywhere}footer{border-top:1px solid var(--line);margin-top:42px;padding-top:18px;color:var(--muted);font-size:.9rem}
+    :root { color-scheme: light; --bg:#f4f6f9; --card:#fff; --ink:#1c2938; --muted:#5c6878; --line:#dce3eb; --accent:#244f83; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif; }
+    main { max-width:900px; margin:34px auto; padding:0 18px 56px; }
+    header, article { background:var(--card); border:1px solid var(--line); border-radius:16px; padding:26px 30px; margin:0 0 16px; }
+    header { border-top:5px solid var(--accent); }
+    h1 { margin:4px 0 10px; font-size:clamp(28px,5vw,40px); line-height:1.18; }
+    h2 { margin:0 0 10px; font-size:21px; line-height:1.3; }
+    p { margin:8px 0; }
+    ul { padding-left:23px; }
+    li { margin:7px 0; }
+    .muted,.meta { color:var(--muted); }
+    .meta { font-size:14px; }
+    a { color:var(--accent); overflow-wrap:anywhere; }
+    code { background:#f0f3f7; padding:2px 5px; border-radius:5px; }
+    footer { text-align:center; color:var(--muted); font-size:13px; padding:10px; }
+    @media(max-width:600px) { header,article { padding:20px; } main { margin:18px auto; } }
   </style>
 </head>
 <body>
 <main>
-<header>
-  <p class="meta">RebelsCore · Android aplikace</p>
-  <h1>Zásady ochrany osobních údajů</h1>
-  <p><strong>Moje Známky</strong></p>
-  <p class="meta">Poslední aktualizace: 20. listopadu 2026</p>
-</header>
+  <header>
+    <p class="meta">RebelsCore · APLIKACE PRO ANDROID</p>
+    <h1>Zásady ochrany osobních údajů</h1>
+    <p><strong>Moje Známky</strong> · balíček <code>cz.bakaprumery.app</code></p>
+    <p class="meta">Verze dokumentu: 1.2 · Aktualizováno: 26. listopadu 2026</p>
+    <p>Tyto zásady popisují, jak aplikace Moje Známky zpracovává údaje při připojení ke školnímu systému Bakaláři, jaké údaje zůstávají v zařízení a kam aplikace odesílá síťové požadavky.</p>
+  </header>
 
-<p class="note">Moje Známky je nezávislá aplikace pro přístup ke školním informacím prostřednictvím systému Bakaláři. Není oficiální aplikací společnosti Bakaláři ani žádné školy. Aplikace funguje jako klient v zařízení uživatele; její provozovatel neprovozuje centrální databázi známek ani školních zpráv.</p>
+  <article>
+    <h2>1. Provozovatel a kontakt</h2>
+    <p><strong>Provozovatel aplikace:</strong> Fyzická osoba</p>
+    <p><strong>Vývojářská značka:</strong> RebelsCore (veřejná značka autora, nikoli samostatná právnická osoba)</p>
+    <p><strong>Kontaktní e-mail:</strong> <a href="mailto:rebelscore.studio@gmail.com">rebelscore.studio@gmail.com</a></p>
+    <p>Moje Známky je nezávislá aplikace třetí strany. Není oficiální aplikací společnosti BAKALÁŘI software s.r.o. ani žádné konkrétní školy a není jimi sponzorována. Školní účet a oficiální školní záznamy vytváří a spravuje škola ve svém systému. Uživatel by se měl seznámit také se zásadami ochrany osobních údajů své školy.</p>
+    <p>RebelsCore neprovozuje vlastní centrální server, na který by aplikace hromadně odesílala známky, rozvrhy, absence nebo školní zprávy. Aplikace komunikuje přímo se školním serverem zvoleným uživatelem a ukládá potřebné pracovní kopie v soukromém prostoru zařízení.</p>
+  </article>
 
-<h2>1. Provozovatel a kontakt</h2>
-<p><strong>Provozovatel aplikace:</strong> Fyzická osoba.</p>
-<p><strong>Vývojářská značka:</strong> RebelsCore (veřejná značka autora, nikoli samostatná právnická osoba).</p>
-<p><strong>Kontaktní e-mail:</strong> <a href="mailto:rebelscore.studio@gmail.com">rebelscore.studio@gmail.com</a>.</p>
+  <article>
+    <h2>2. Jaké údaje aplikace zpracovává</h2>
+    <ul>
+      <li><strong>Přihlašovací údaje:</strong> uživatelské jméno školního účtu, heslo zadané při přihlašování a autentizační tokeny. Heslo se použije k ověření na školním serveru a aplikace jej trvale neukládá. Uživatelské jméno a obnovovací token se ukládají v šifrovaném soukromém úložišti aplikace.</li>
+      <li><strong>Údaje školního profilu:</strong> identifikátor školního účtu a údaje profilu, které školní server danému účtu zpřístupní, například jméno, příjmení, třída nebo další školní identifikační údaje.</li>
+      <li><strong>Školní vzdělávací údaje:</strong> známky, předměty, rozvrh, hodiny, absence, údaje o školní docházce a další informace vrácené školním serverem pro přihlášený účet.</li>
+      <li><strong>Školní zprávy:</strong> přijaté zprávy, obsah nástěnky a související údaje, které školní server zpřístupní přihlášenému účtu.</li>
+      <li><strong>Obsah vytvořený uživatelem:</strong> pokud oprávněný uživatel využije funkci omluvenky, aplikace odešle na školní server text omluvenky, datum nebo období, vybrané hodiny a další údaje vyplněné uživatelem.</li>
+      <li><strong>Lokální údaje a nastavení:</strong> uživatelem zadané známky, nastavení výpočtu a predikce absence, nastavení vzhledu, vybraná škola a její adresa serveru, cache školních dat a technické záznamy potřebné k potlačení opakovaných upozornění.</li>
+    </ul>
+    <p>Rozsah školních údajů závisí na konkrétní škole, přihlášeném typu účtu a oprávněních přidělených školou. Aplikace neumožňuje vytvoření nového školního účtu; používá účet, který již existuje v systému školy.</p>
+  </article>
 
-<h2>2. Jaké údaje aplikace zpracovává</h2>
-<ul>
-  <li><strong>Adresa školního serveru a uživatelské jméno:</strong> používají se k určení školy a školního účtu. Uživatelské jméno a adresa serveru se ukládají v soukromém úložišti aplikace.</li>
-  <li><strong>Heslo:</strong> uživatel je zadá při přihlášení. Aplikace ho odešle zabezpečeným spojením přímo na zvolený školní server k ověření; aplikace ho neukládá jako trvale uloženou položku.</li>
-  <li><strong>Přístupové tokeny:</strong> obnovovací token, který může školní server vrátit po přihlášení, aplikace ukládá zašifrovaný pomocí AES-GCM s klíčem spravovaným Android Keystore. Přístupové tokeny používané pro jednotlivé požadavky se zpracovávají v rámci běhu aplikace.</li>
-  <li><strong>Školní údaje:</strong> známky, předměty, rozvrh, absence, informace o účtu a oprávněních, zprávy, nástěnka a případně údaje o odeslaných omluvenkách, pokud je daný školní účet a server zpřístupňují.</li>
-  <li><strong>Obsah zadaný uživatelem:</strong> například text a údaje omluvenky, pokud uživatel tuto funkci sám použije a odešle.</li>
-  <li><strong>Nastavení a provozní údaje:</strong> nastavení aplikace, lokální cache a informace potřebné pro kontrolu nových známek či zpráv a zobrazování oznámení.</li>
-</ul>
-<p>Dostupnost a rozsah školních údajů závisí na oprávněních účtu a na funkcích, které poskytuje konkrétní škola a její server Bakaláři.</p>
+  <article>
+    <h2>3. Účely zpracování</h2>
+    <ul>
+      <li>ověření přihlášení k uživatelem vybranému školnímu serveru;</li>
+      <li>načtení a zobrazení školního profilu, známek, rozvrhu, absence a školních zpráv;</li>
+      <li>výpočet průměrů a predikce absence přímo v zařízení;</li>
+      <li>vytvoření souboru s rozvrhem ve formátu PDF nebo JPG na žádost uživatele;</li>
+      <li>odeslání omluvenky na školní server, pokud daný účet tuto funkci podporuje a uživatel odeslání potvrdí;</li>
+      <li>kontrola nových známek, zpráv, nástěnky a změn rozvrhu a zobrazení místních oznámení, pokud uživatel oznámení povolí;</li>
+      <li>zobrazení přehledu novinek ve widgetu na ploše, pokud si jej uživatel na plochu sám přidá.</li>
+    </ul>
+    <p>Aplikace nepoužívá školní údaje k reklamnímu cílení ani k vytváření reklamních profilů.</p>
+  </article>
 
-<h2>3. Odkud údaje pocházejí a kam se předávají</h2>
-<p>Uživatel sám zadá adresu nebo vybere školní server a přihlásí se údaji, které mu poskytla škola. Aplikace odesílá přihlašovací požadavek a následné požadavky na tento zvolený školní server, odkud načítá školní informace.</p>
-<p>Pokud uživatel s dostupným oprávněním odešle omluvenku, její text a související údaje se předají přímo příslušnému školnímu serveru. Školní server a škola zpracovávají přijaté údaje podle vlastních pravidel. Pro opravu nebo výmaz záznamů vedených školou je nutné obrátit se na školu.</p>
-<p>Provozovatel aplikace neprovozuje vlastní server, na který by aplikace odesílala známky, absence nebo obsah školních zpráv. Aplikace v této verzi nepoužívá reklamní SDK ani vlastní analytickou službu.</p>
+  <article>
+    <h2>4. Kam jsou údaje odesílány</h2>
+    <p><strong>Školní server Bakalářů zvolený uživatelem:</strong> při přihlášení aplikace odešle uživatelské jméno a heslo za účelem ověření. Při dalších požadavcích odešle autentizační token a požadavky na školní data. Pokud uživatel odešle omluvenku, odešle se na stejný školní server také její obsah. Školní server následně vrací data, která aplikace zobrazuje a ukládá do lokální cache.</p>
+    <p><strong>Veřejný katalog škol Bakalářů:</strong> při vyhledávání školy aplikace načítá veřejné údaje o městech a školách ze služby <a href="https://sluzby.bakalari.cz/" target="_blank" rel="noopener noreferrer">sluzby.bakalari.cz</a>. Službě se předává dotaz potřebný k vyhledání města nebo školy. Přihlašovací údaje školního účtu se této službě neposílají.</p>
+    <p><strong>Svátky API:</strong> při zobrazení jmenin nebo svátků aplikace může odeslat službě <a href="https://svatkyapi.cz/" target="_blank" rel="noopener noreferrer">svatkyapi.cz</a> požadavek obsahující konkrétní datum. Přihlašovací údaje, známky ani školní zprávy se této službě neposílají.</p>
+    <p>Při běžném síťovém spojení mohou uvedené služby technicky obdržet IP adresu zařízení a standardní metadata požadavku. Jejich další logování a uchovávání se řídí zásadami příslušných provozovatelů.</p>
+    <p>Aplikace neobsahuje reklamní SDK ani samostatnou analytickou službu v deklarovaných závislostech projektu. Aplikace nevyžaduje oprávnění k poloze, kontaktům, kalendáři, mikrofonu ani fotografiím.</p>
+  </article>
 
-<h2>4. Ukládání údajů v zařízení</h2>
-<p>Aplikace ukládá některé údaje do soukromého úložiště aplikace v zařízení, aby si pamatovala nastavení a mohla rychleji zobrazovat dříve načtené školní informace. Může jít zejména o uživatelské jméno, profil účtu, cache známek, rozvrhu, absence a přijatých zpráv a údaje potřebné pro místní plánování oznámení.</p>
-<p>Obnovovací přihlašovací token je v aplikaci ukládán zašifrovaný pomocí AES-GCM; šifrovací klíč spravuje Android Keystore. Uživatelské jméno a uvedené cache jsou ukládány v soukromém úložišti aplikace, ale nejsou samostatně zašifrovány touto aplikační šifrovací metodou. Jejich ochranu zajišťují standardní mechanismy oddělení dat aplikací v systému Android a zabezpečení samotného zařízení.</p>
+  <article>
+    <h2>5. Ukládání a zabezpečení údajů</h2>
+    <p>Údaje potřebné pro fungování aplikace se ukládají v soukromém prostoru aplikace v zařízení. Uživatelské jméno, profil, školní data, lokální známky, cache rozvrhu, cache zpráv a další citlivé položky jsou ukládány šifrovaně pomocí AES-GCM. Šifrovací klíče spravuje Android Keystore.</p>
+    <p>Obnovovací autentizační token je rovněž ukládán v šifrované podobě s využitím Android Keystore. Síťová komunikace se školním serverem je omezena na HTTPS; aplikace blokuje nezabezpečený přenos HTTP. Zálohování aplikačních dat Androidem je vypnuto a pravidla zálohování vylučují soukromá aplikační data.</p>
+    <p>Pro načtení některých školních stránek aplikace používá systémové WebView. WebView může podle nastavení Androidu uchovávat cookies nebo webová data pro doménu vybraného školního serveru, která jsou potřebná pro zobrazení přihlášeného školního obsahu.</p>
+    <p>Žádné technické opatření nemůže zaručit absolutní bezpečnost. Uživatel by měl chránit své zařízení zámkem obrazovky a nesdělovat své školní přihlašovací údaje dalším osobám.</p>
+  </article>
 
-<h2>5. Zabezpečení přenosu</h2>
-<p>Komunikace se školním serverem probíhá přes HTTPS. Aplikace odmítá nezabezpečená HTTP spojení a u síťových požadavků používá kontrolu zabezpečeného spojení. Bezpečnost závisí také na zabezpečení zařízení uživatele, jeho zámku obrazovky a na zabezpečení školního serveru.</p>
-<p>Žádný způsob elektronického přenosu nebo ukládání dat nemůže zaručit absolutní bezpečnost. Uživatel by neměl sdílet školní přihlašovací údaje s jinými osobami.</p>
+  <article>
+    <h2>6. Oznámení a exporty</h2>
+    <p>Pokud uživatel povolí oznámení, aplikace může na pozadí v intervalech stanovených systémem Android kontaktovat vybraný školní server a kontrolovat nové známky, přijaté zprávy, položky nástěnky a změny rozvrhu. Požadavky probíhají přímo mezi zařízením a školním serverem. Oznámení zobrazuje Android lokálně na zařízení. Na zamčené obrazovce aplikace zobrazuje pouze obecné upozornění bez podrobností; obsah oznámení je vidět až po odemčení zařízení.</p>
+    <p>Pokud si uživatel přidá na plochu widget „Novinky“, zobrazuje widget stručný přehled posledních školních novinek přímo na ploše zařízení. Data widgetu se ukládají šifrovaně v soukromém úložišti aplikace a při odhlášení se odstraní.</p>
+    <p>Export rozvrhu do PDF nebo JPG se vytváří přímo v zařízení. Uživatel sám zvolí, kam soubor uloží nebo přes kterou aplikaci jej bude sdílet. Jakmile je soubor předán jiné aplikaci, službě nebo osobě, jeho další uchovávání a zabezpečení závisí na zvoleném cíli.</p>
+  </article>
 
-<h2>6. Oznámení</h2>
-<p>Pokud uživatel povolí oznámení, aplikace může na zařízení v pravidelných intervalech kontrolovat školní server, zda jsou dostupné nové známky nebo zprávy, a zobrazit systémové oznámení. Pro tuto funkci si aplikace ukládá lokální informace potřebné k rozpoznání již oznámených položek. Oznámení lze vypnout v nastavení Androidu nebo aplikace.</p>
+  <article>
+    <h2>7. Uchovávání a odstranění údajů</h2>
+    <p>Lokální školní údaje, cache, uživatelské jméno a autentizační tokeny zůstávají v zařízení po dobu používání příslušného školního účtu a funkcí aplikace. Při odhlášení nebo změně školního serveru aplikace odstraní lokální data navázaná na účet a zneplatní šifrovací klíč používaný pro tato data. Vymazání dat aplikace nebo její odinstalování odstraní soukromá aplikační data podle pravidel Androidu.</p>
+    <p>Exportované soubory uložené mimo soukromé úložiště aplikace je nutné odstranit samostatně. Odhlášení ani odinstalování aplikace nemaže známky, absenci, zprávy ani školní účet na serveru školy. O opravě nebo vymazání oficiálních školních záznamů rozhoduje příslušná škola podle svých pravidel a právních povinností.</p>
+    <p>Aplikace nezřizuje vlastní uživatelské účty. Školní účet vytváří a spravuje škola. S žádostí o odstranění oficiálních školních záznamů se proto obraťte na svou školu. S dotazy k lokálnímu ukládání a fungování aplikace kontaktujte RebelsCore na e-mailu uvedeném v těchto zásadách.</p>
+  </article>
 
-<h2>7. Uchovávání a mazání údajů</h2>
-<p>Lokální údaje zůstávají v zařízení, dokud je aplikace potřebuje pro své funkce nebo dokud uživatel neodstraní data aplikace. Odhlášení odstraní uložený přístupový token, uživatelské jméno a vybrané cache. Pro odstranění všech lokálně uložených dat použijte v Androidu Nastavení → Aplikace → Moje Známky → Úložiště → Vymazat data, případně aplikaci odinstalujte.</p>
-<p>Vymazání dat aplikace ani její odinstalování nemaže školní záznamy uložené na serveru Bakalářů. O jejich opravu nebo výmaz musí uživatel požádat příslušnou školu.</p>
+  <article>
+    <h2>8. Děti a školní účty</h2>
+    <p>Aplikaci mohou používat žáci a studenti, včetně osob mladších 18 let. Aplikace sama nezřizuje školní účty a nevyžaduje vytvoření vlastního účtu u RebelsCore. Přístup ke školním údajům závisí na oprávněních školního účtu a na pravidlech školy. Rodiče a zákonní zástupci by měli používání aplikace a školního účtu u nezletilých řešit v souladu s pravidly školy a příslušnými právními předpisy.</p>
+  </article>
 
-<h2>8. Účty a věková skupina</h2>
-<p>Aplikace nevytváří vlastní uživatelské účty. Uživatel se přihlašuje školním účtem vytvořeným a spravovaným školou v systému Bakaláři. Aplikace může být používána studenty včetně nezletilých; používání školního účtu se řídí pravidly školy a systému Bakaláři. Rodiče nebo zákonní zástupci mohou otázky týkající se školních záznamů řešit přímo se školou.</p>
+  <article>
+    <h2>9. Práva uživatelů a kontakt na školu</h2>
+    <p>Práva týkající se oficiálních školních záznamů, například právo na přístup, opravu, omezení zpracování nebo výmaz, je třeba uplatnit u školy, která příslušné záznamy spravuje. Informace o zpracování údajů školou a její kontaktní údaje by měly být dostupné ve školním systému nebo na webových stránkách školy.</p>
+    <p>V případě dotazů ohledně aplikace, jejího lokálního ukládání nebo zabezpečení kontaktujte RebelsCore na adrese <a href="mailto:rebelscore.studio@gmail.com">rebelscore.studio@gmail.com</a>.</p>
+    <p>Uživatel se může se stížností obrátit také na příslušný dozorový úřad, v České republice na <a href="https://uoou.gov.cz/" target="_blank" rel="noopener noreferrer">Úřad pro ochranu osobních údajů</a>.</p>
+  </article>
 
-<h2>9. Práva uživatelů</h2>
-<p>U školních záznamů vedených školou je třeba žádosti o přístup, opravu nebo výmaz adresovat škole, která záznamy spravuje. V případě dotazů k tomu, jak aplikace pracuje s údaji lokálně v zařízení, kontaktujte provozovatele na e-mailu uvedeném níže. Práva subjektů údajů se uplatňují v rozsahu a za podmínek stanovených příslušnými právními předpisy.</p>
-
-<h2>10. Služby třetích stran</h2>
-<p>Aplikace komunikuje se školním systémem Bakaláři na serveru zvoleném uživatelem. RebelsCore není vlastníkem ani provozovatelem těchto školních serverů. Používání systému Bakaláři se řídí podmínkami a zásadami jeho provozovatele a příslušné školy.</p>
-
-<h2>11. Změny těchto zásad</h2>
-<p>Tyto zásady mohou být aktualizovány při změně funkcí aplikace nebo způsobu zpracování údajů. Aktuální znění je vždy zveřejněno na této adrese; datum poslední aktualizace je uvedeno v záhlaví.</p>
-
-<h2>12. Kontakt</h2>
-<p>Dotazy k těmto zásadám a ochraně soukromí posílejte na <a href="mailto:rebelscore.studio@gmail.com">rebelscore.studio@gmail.com</a>.</p>
-
-<footer>© 2026 RebelsCore · Moje Známky</footer>
+  <article>
+    <h2>10. Změny těchto zásad</h2>
+    <p>Tyto zásady mohou být aktualizovány při změně aplikace nebo způsobu zpracování údajů. Aktuální verze bude zveřejněna na stejné internetové adrese. Datum poslední aktualizace je uvedeno v horní části dokumentu.</p>
+  </article>
+  <footer>© 2026 RebelsCore · Moje Známky</footer>
 </main>
 </body>
 </html>

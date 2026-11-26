@@ -32,7 +32,7 @@
     <p class="meta">RebelsCore · APLIKACE PRO ANDROID</p>
     <h1>Zásady ochrany osobních údajů</h1>
     <p><strong>Moje Známky</strong> · balíček <code>cz.bakaprumery.app</code></p>
-    <p class="meta">Verze dokumentu: 1.1 · Aktualizováno: 20. listopadu 2026</p>
+    <p class="meta">Verze dokumentu: 1.2 · Aktualizováno: 26. listopadu 2026</p>
     <p>Tyto zásady popisují, jak aplikace Moje Známky zpracovává údaje při připojení ke školnímu systému Bakaláři, jaké údaje zůstávají v zařízení a kam aplikace odesílá síťové požadavky.</p>
   </header>
 
@@ -66,7 +66,8 @@
       <li>výpočet průměrů a predikce absence přímo v zařízení;</li>
       <li>vytvoření souboru s rozvrhem ve formátu PDF nebo JPG na žádost uživatele;</li>
       <li>odeslání omluvenky na školní server, pokud daný účet tuto funkci podporuje a uživatel odeslání potvrdí;</li>
-      <li>kontrola nových známek a zpráv a zobrazení místních oznámení, pokud uživatel oznámení povolí.</li>
+      <li>kontrola nových známek, zpráv, nástěnky a změn rozvrhu a zobrazení místních oznámení, pokud uživatel oznámení povolí;</li>
+      <li>zobrazení přehledu novinek ve widgetu na ploše, pokud si jej uživatel na plochu sám přidá.</li>
     </ul>
     <p>Aplikace nepoužívá školní údaje k reklamnímu cílení ani k vytváření reklamních profilů.</p>
   </article>
@@ -77,7 +78,7 @@
     <p><strong>Veřejný katalog škol Bakalářů:</strong> při vyhledávání školy aplikace načítá veřejné údaje o městech a školách ze služby <a href="https://sluzby.bakalari.cz/" target="_blank" rel="noopener noreferrer">sluzby.bakalari.cz</a>. Službě se předává dotaz potřebný k vyhledání města nebo školy. Přihlašovací údaje školního účtu se této službě neposílají.</p>
     <p><strong>Svátky API:</strong> při zobrazení jmenin nebo svátků aplikace může odeslat službě <a href="https://svatkyapi.cz/" target="_blank" rel="noopener noreferrer">svatkyapi.cz</a> požadavek obsahující konkrétní datum. Přihlašovací údaje, známky ani školní zprávy se této službě neposílají.</p>
     <p>Při běžném síťovém spojení mohou uvedené služby technicky obdržet IP adresu zařízení a standardní metadata požadavku. Jejich další logování a uchovávání se řídí zásadami příslušných provozovatelů.</p>
-    <p>Verze 1.8 neobsahuje reklamní SDK ani samostatnou analytickou službu v deklarovaných závislostech projektu. Aplikace nevyžaduje oprávnění k poloze, kontaktům, kalendáři, mikrofonu ani fotografiím.</p>
+    <p>Aplikace neobsahuje reklamní SDK ani samostatnou analytickou službu v deklarovaných závislostech projektu. Aplikace nevyžaduje oprávnění k poloze, kontaktům, kalendáři, mikrofonu ani fotografiím.</p>
   </article>
 
   <article>
@@ -90,7 +91,8 @@
 
   <article>
     <h2>6. Oznámení a exporty</h2>
-    <p>Pokud uživatel povolí oznámení, aplikace může na pozadí v intervalech stanovených systémem Android kontaktovat vybraný školní server a kontrolovat nové známky, přijaté zprávy a položky nástěnky. Požadavky probíhají přímo mezi zařízením a školním serverem. Oznámení zobrazuje Android lokálně na zařízení.</p>
+    <p>Pokud uživatel povolí oznámení, aplikace může na pozadí v intervalech stanovených systémem Android kontaktovat vybraný školní server a kontrolovat nové známky, přijaté zprávy, položky nástěnky a změny rozvrhu. Požadavky probíhají přímo mezi zařízením a školním serverem. Oznámení zobrazuje Android lokálně na zařízení. Na zamčené obrazovce aplikace zobrazuje pouze obecné upozornění bez podrobností; obsah oznámení je vidět až po odemčení zařízení.</p>
+    <p>Pokud si uživatel přidá na plochu widget „Novinky“, zobrazuje widget stručný přehled posledních školních novinek přímo na ploše zařízení. Data widgetu se ukládají šifrovaně v soukromém úložišti aplikace a při odhlášení se odstraní.</p>
     <p>Export rozvrhu do PDF nebo JPG se vytváří přímo v zařízení. Uživatel sám zvolí, kam soubor uloží nebo přes kterou aplikaci jej bude sdílet. Jakmile je soubor předán jiné aplikaci, službě nebo osobě, jeho další uchovávání a zabezpečení závisí na zvoleném cíli.</p>
   </article>
 
